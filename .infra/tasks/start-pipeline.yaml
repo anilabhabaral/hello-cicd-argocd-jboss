@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: start-pipeline
+spec:
+  steps:
+  - command:
+    - /bin/bash
+    - -c
+    - echo ">>>>>>>>>>>>>> Hello Anilabha! Pipeline Started!.. <<<<<<<<<<<<"
+    image: registry.redhat.io/ubi7/ubi-minimal
+    name: ""
+    resources: {}

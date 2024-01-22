@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: maven-build
+spec:
+  description: Compile Java application with Maven
+  params:
+    - name: maven-image
+      description: Namespace where the image will be pushed
+      default: registry.access.redhat.com/ubi8/openjdk-11:1.18-2
+      type: string
+  steps:
+    - name: maven-build
+      image: $(params.maven-image)
+      workingDir: $(workspaces.source.path)/code
+      command:
+        - mvn
+      args:
+        - clean
+        - install
+        - -DskipTests # Test should be run and recorded in a separate task      
+  workspaces:
+    - description: Persistance Storage between Pods.
+      name: source
