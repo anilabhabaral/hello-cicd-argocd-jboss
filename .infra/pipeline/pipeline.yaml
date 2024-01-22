@@ -1,0 +1,41 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  creationTimestamp: "2024-01-22T17:18:38Z"
+  generation: 1
+  name: new-pipeline
+  namespace: ci-cd-argocd-jboss-anil
+  resourceVersion: "502798471"
+  uid: d57678ab-edfd-4f52-850c-e06f4ad9f0e1
+spec:
+  tasks:
+  - name: start-pipeline
+    taskRef:
+      kind: Task
+      name: start-pipeline
+  - name: git-clone
+    params:
+    - name: repo-url
+      value: https://github.com/anilabhabaral/hello-cicd-argocd-jboss.git
+    runAfter:
+    - start-pipeline
+    taskRef:
+      kind: Task
+      name: git-clone
+    workspaces:
+    - name: output
+      workspace: workspace-test
+  - name: maven-build
+    params:
+    - name: maven-image
+      value: registry.access.redhat.com/ubi8/openjdk-11:1.18-2
+    runAfter:
+    - git-clone
+    taskRef:
+      kind: Task
+      name: maven-build
+    workspaces:
+    - name: source
+      workspace: workspace-test
+  workspaces:
+  - name: workspace-test
