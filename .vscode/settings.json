@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/kode-ci-build-1.0.0.json": "file:///Users/abaral/Downloads/ci-cd-tekton-argicd-jboss/helloworld/.infra/tasks/git-clone.yaml"
-    }
-}
