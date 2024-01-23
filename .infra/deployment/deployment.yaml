@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellworld-deployment
+  labels:
+    app: jboss-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jboss-app
+  template:
+    metadata:
+      labels:
+        app: jboss-app
+    spec:
+      containers:
+      - name: jboss
+        image:  quay.io/rhn_support_abaral1/eap-helloworld:latest
+        ports:
+        - containerPort: 8080
