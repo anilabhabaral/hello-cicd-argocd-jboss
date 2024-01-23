@@ -1,4 +1,4 @@
-#start from eap71-openshift
+#start from eap74-openshift
 FROM --platform=linux/x86_64 registry.redhat.io/jboss-eap-7/eap74-openjdk11-openshift-rhel8:7.4.14-5
 
 # file author / maintainer
