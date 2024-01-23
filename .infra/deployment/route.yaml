@@ -5,7 +5,7 @@ metadata:
     openshift.io/host.generated: "true"
   labels:
     app.kubernetes.io/instance: test
-  name: jboss-helloworld-service
+  name: jboss-helloworld-service-route
   namespace: eap-test-02
 spec:
   host: jboss-helloworld-service-eap-test-02.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
