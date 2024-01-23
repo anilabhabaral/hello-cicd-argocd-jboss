@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app.kubernetes.io/instance: test
+  name: jboss-helloworld-service
+  namespace: eap-test-02
+spec:
+  host: jboss-helloworld-service-eap-test-02.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: jboss-helloworld-service
+    weight: 100
+  wildcardPolicy: None
