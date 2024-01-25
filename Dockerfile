@@ -5,13 +5,13 @@ FROM --platform=linux/x86_64 quay.io/rhn_support_abaral1/eap-helloworld
 MAINTAINER "Anilabha Baral" "anilabha911@gmail.com"
 
 # Copy war to deployments folder
-COPY target/helloworld.war $JBOSS_HOME/standalone/deployments/
+# COPY target/helloworld.war $JBOSS_HOME/standalone/deployments/
 
-# User root to modify war owners
-USER root
+# # User root to modify war owners
+# USER root
 
-# Modify owners war
-RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/helloworld.war
+# # Modify owners war
+# RUN chown jboss:jboss $JBOSS_HOME/standalone/deployments/helloworld.war
 
-# Important, use jboss user to run image
-USER jboss
+# # Important, use jboss user to run image
+# USER jboss
