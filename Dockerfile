@@ -1,5 +1,5 @@
 #start from eap74-openshift
-FROM --platform=linux/x86_64 registry.redhat.io/jboss-eap-7/eap74-openjdk11-openshift-rhel8:7.4.14-5
+FROM --platform=linux/x86_64 24.0.5 quay.io/rhn_support_abaral1/eap-helloworld
 
 # file author / maintainer
 MAINTAINER "Anilabha Baral" "anilabha911@gmail.com"
