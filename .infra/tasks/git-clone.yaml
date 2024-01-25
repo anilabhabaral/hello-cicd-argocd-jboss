@@ -12,7 +12,7 @@ spec:
       name: commit
   steps:
     - name: git-clone
-      image: alpine/git
+      image: quay.io/rhn_support_abaral1/alpine/git
       workingDir: $(workspaces.output.path)/code
       script: |
         # Remove any existing files from our code workspace
