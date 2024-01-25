@@ -1,5 +1,5 @@
 #start from eap74-openshift
-FROM --platform=linux/x86_64 24.0.5 quay.io/rhn_support_abaral1/eap-helloworld
+FROM --platform=linux/x86_64 quay.io/rhn_support_abaral1/eap-helloworld
 
 # file author / maintainer
 MAINTAINER "Anilabha Baral" "anilabha911@gmail.com"
