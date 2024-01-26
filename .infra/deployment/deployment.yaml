@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jboss
-        image:  quay.io/rhn_support_abaral1/eap-helloworld:latest
+        image: image-registry.openshift-image-registry.svc:5000/anil-cicd/hello
         ports:
         - containerPort: 8080
