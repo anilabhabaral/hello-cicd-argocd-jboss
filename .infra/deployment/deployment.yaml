@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jboss
-        image: image-registry.openshift-image-registry.svc:5000/anil-cicd/hello:latest
+        image: image-registry.openshift-image-registry.svc:5000/anil-cicd/hello:9e3ecfca-8c06-481c-93db-25d59c0576ed
         ports:
         - containerPort: 8080
