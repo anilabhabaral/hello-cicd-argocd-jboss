@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/sourcehut-build-0.65.0.json": "file:///Users/abaral/Downloads/hello-cicd-argocd-jboss/.infra/tasks/image-build-push.yaml"
-    }
-}
