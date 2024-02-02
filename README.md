@@ -9,7 +9,7 @@ To create and run the openshift pipeline follow the below mentioned steps:
 2. Login to Openshift cluster `$ oc login --token=<TOKEN> --server=<SERVER_URL>`
 3. Create new project/namespace in Openshift cluster `$ oc new-project testpipeline`
 4. Run the following command to see the pipeline service account `$ oc get serviceaccount pipeline`
-5. Create the tasks `$ oc apply .infra/tasks/.`
+5. Create the tasks `$ oc apply -f .infra/tasks/.`
 6. List the tasks `$ tkn task ls`
 7. Create pipeline `$ oc apply -f .infra/pipeline/.`
 8. List the available pipeline `$ oc get pipeline`
