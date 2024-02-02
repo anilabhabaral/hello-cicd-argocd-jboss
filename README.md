@@ -13,7 +13,7 @@ To create and run the openshift pipeline follow the below mentioned steps:
 6. List the tasks `$ tkn task ls`
 7. Create pipeline `$ oc apply -f .infra/pipeline/.`
 8. List the available pipeline `$ oc get pipeline`
-9. Run Pipeline `$ tkn pipeline start new-pipeline -w name=workspace-test,volumeClaimTemplateFile=https://raw.githubusercontent.com/anilabhabaral/hello-tekton/main/.infra/pvc/pvc-anil.yaml --use-param-defaults`
+9. Run Pipeline `$ tkn pipeline start new-pipeline -w name=workspace-test,volumeClaimTemplateFile=https://raw.githubusercontent.com/anilabhabaral/hello-cicd-argocd-jboss/main/.infra/pipeline/pvc-anil.yaml --use-param-defaults`
 10. Check whether the image of the new pipelinerun is pushed in internal image registry `$ oc get is`
    
 
