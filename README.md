@@ -1,5 +1,6 @@
 In progress!!....
 
+# hello-cicd-argocd-jboss
 
 ## This is a project where i used Openshift pipeline as a CI tool to build the project and image and used ArgoCD as a CD tool to deploy this "Hello World" maven application into JBoss EAP.
 
@@ -16,7 +17,7 @@ To create and run the openshift pipeline follow the below mentioned steps:
 8. Create pipeline `$ oc apply -f .infra/pipeline/.`
 9. List the available pipeline `$ oc get pipeline`
 10. Run Pipeline `$ tkn pipeline start new-pipeline -w name=workspace-test,volumeClaimTemplateFile=https://raw.githubusercontent.com/anilabhabaral/hello-cicd-argocd-jboss/main/.infra/pipeline/pvc-anil.yaml --use-param-defaults`
-11. Check whether the image of the new pipelinerun is pushed in internal image registry `$ oc get is`
+11. Check whether the image of the new pipelinerun is pushed into internal image registry `$ oc get is`
 
 ### ArgoCD(CD)
 To deploy the the image build by the above pipeline i used Openshift GitOps operator(GitOps). Steps:
