@@ -24,5 +24,6 @@ To deploy the the image build by the above pipeline i used Openshift GitOps oper
 2. Go to Operators --> Operator Hub
 3. Search GitOps operator
 4. Install Openshift GitOps operator
+5. <<<.... In progress....!!!!!>>>
    
 
