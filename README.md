@@ -3,7 +3,7 @@ In progress!!....
 
 This is a project where i used Openshift pipeline as a CI tool to build the project and image and used ArgoCD as a CD tool to deploy this "Hello World" maven application into JBoss EAP.
 
-To craete and run the openshift pipeline follow the below mentioned steps:
+To create and run the openshift pipeline follow the below mentioned steps:
 
 1. Clone this repo `$ git clone https://github.com/anilabhabaral/hello-cicd-argocd-jboss.git`
 2. Login to Openshift cluster `$ oc login --token=<TOKEN> --server=<SERVER_URL>`
