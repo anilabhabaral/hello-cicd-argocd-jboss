@@ -8,11 +8,12 @@ To craete and run the openshift pipeline follow the below mentioned steps:
 1. Clone this repo `$ git clone https://github.com/anilabhabaral/hello-cicd-argocd-jboss.git`
 2. Login to Openshift cluster `$ oc login --token=<TOKEN> --server=<SERVER_URL>`
 3. Create new project/namespace in Openshift cluster `$ oc new-project testpipeline`
-4. Create the tasks `$ oc apply .infra/tasks/.`
-5. List the tasks `tkn task ls`
-6. Create pipeline `$ oc apply -f .infra/pipeline/.`
-7. List the available pipeline
-8. Run Pipeline 
-9. Check whether the image of the new pipelinerun is pushed in internal image registry:
+4. Run the following command to see the pipeline service account `$ oc get serviceaccount pipeline`
+5. Create the tasks `$ oc apply .infra/tasks/.`
+6. List the tasks `$ tkn task ls`
+7. Create pipeline `$ oc apply -f .infra/pipeline/.`
+8. List the available pipeline `$ oc get pipeline`
+9. Run Pipeline 
+10. Check whether the image of the new pipelinerun is pushed in internal image registry:
    
 
