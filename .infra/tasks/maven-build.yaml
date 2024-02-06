@@ -18,7 +18,7 @@ spec:
       args:
         - clean
         - install
-        - -DskipTests # Test should be run and recorded in a separate task      
+        - -DskipTests     
   workspaces:
     - description: Persistance Storage between Pods.
       name: source
