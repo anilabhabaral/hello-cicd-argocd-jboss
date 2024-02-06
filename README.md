@@ -52,9 +52,37 @@ argocd-anil-server-6c67d9659d-l4gkv        1/1     Running   0          12m
 14. Click on `+ NEW APP`
 15. It will open a Form view like below:
 ![fig-7](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/formview.png)
-16. Enter the details as below:
+16. Enter the details as below and click `Create`:
 ![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/form1.png)
 ![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/form2.png)
-17. Click create
-18. 
+17. Initially the argocd app will look like:
+![fig-10](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app1.png)
+18. After creating all the deployment,service and route the argocd app will look:
+![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app2.png)
+![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app_view.png)
+19. Check the deployment created by argocd:
+```
+$ oc get deploy -n <NAMESPACE_NAME>
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+helloworld-deployment     1/1     1            1           47m  <============== 
+
+```
+20. Check the service created by argocd:
+```
+$ oc get svc -n <NAMESPACE_NAME>
+NAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+jboss-helloworld-service     ClusterIP   172.30.20.6      <none>        8080/TCP            49m
+
+```
+
+21. Check the route created by argocd:
+```
+$ oc get route  -n <NAMESPACE_NAME>
+NAME                             HOST/PORT                                                                            PATH   SERVICES                   PORT    TERMINATION            WILDCARD
+jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxxxx.xxxx.xxxxxx.com          jboss-helloworld-service   8080                           None
+
+```
+
+
+
 
