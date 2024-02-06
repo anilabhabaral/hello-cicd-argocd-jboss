@@ -71,7 +71,7 @@ helloworld-deployment     1/1     1            1           47m  <==============
 ```
 $ oc get svc -n <NAMESPACE_NAME>
 NAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
-jboss-helloworld-service     ClusterIP   172.30.20.6      <none>        8080/TCP            49m
+jboss-helloworld-service     ClusterIP   xxx.xx.xx.xx      <none>        8080/TCP            49m
 
 ```
 
