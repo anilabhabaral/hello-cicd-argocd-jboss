@@ -27,7 +27,7 @@ To deploy the the image build by the above pipeline i used Openshift GitOps oper
 5. Click on the `Red Hat OpenShift GitOps`. You will see the below:
 ![fig-2](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/inside_operator.png)
 6. Click on `+ Create instance` in `ACD Argo CD` the above page
-7. It will open a Form view like below. In the Form view enter a Name and leave the other input box as default.
+7. It will open a Form view like below. In the Form view enter a `Name` and leave the other input box as default.
 ![fig-3](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/create_instance.png)
 8. After creating the instance, it can be viewed as below:
 ![fig-4](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/instance.png)
