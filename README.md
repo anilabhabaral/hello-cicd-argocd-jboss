@@ -1,7 +1,6 @@
 In progress!!....
 
-# hello-cicd-argocd-jboss
-
+# Build and Deploy java maven application into JBoss uisng Openshift PipeLine(CI) and ArgoCD(CD)
 ## This is a project where i used Openshift pipeline as a CI tool to build the project and image and used ArgoCD as a CD tool to deploy this "Hello World" maven application into JBoss EAP.
 
 ### Pipeline (CI)
