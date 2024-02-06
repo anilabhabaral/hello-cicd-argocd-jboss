@@ -20,7 +20,7 @@ spec:
       type: string
     - name: namespace
       description: Namespace where the image will be pushed
-      default: anil-cicd
+      default: default
       type: string
     - name: buildah-image
       description: Buildah Image

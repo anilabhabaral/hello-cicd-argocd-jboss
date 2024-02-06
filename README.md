@@ -25,14 +25,14 @@ To deploy the the image build by the above pipeline i used Openshift GitOps oper
 2. Go to Operators --> Operator Hub
 3. Search GitOps operator
 4. Install Openshift GitOps operator
-![fig-1](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/gitops_operator.png)
+![fig-1](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/gitops_operator.png)
 5. Click on the `Red Hat OpenShift GitOps`. You will see the below:
-![fig-2](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/inside_operator.png)
+![fig-2](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/inside_operator.png)
 6. Click on `+ Create instance` in `ACD Argo CD` the above page
 7. It will open a Form view like below. In the Form view enter a Name and leave the other input box as default.
-![fig-3](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/create_instance.png)
+![fig-3](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/create_instance.png)
 8. After creating the instance, it can be viewed as below:
-![fig-4](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/instance.png)
+![fig-4](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/instance.png)
 9. Run `$ oc get pod` to see all the agrocd pods are ready or not:
 ```
 $ oc get pod
@@ -45,21 +45,21 @@ argocd-anil-server-6c67d9659d-l4gkv        1/1     Running   0          12m
 ```
 10. Check the argocd route using `$ oc get route`
 11. Copy and past the route url of argocd in a browser, it will show the login page or argocd:
-![fig-5](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/argocd_login.png)
+![fig-5](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argocd_login.png)
 12. Click on `LOG IN VIA OPENSHIFT`. It will redirect to the openshift login page. Add the required username and password to login to argocd using openshift login.
 13. ArgoCD home page:
-![fig-6](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/argo_home.png)
+![fig-6](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argo_home.png)
 14. Click on `+ NEW APP`
 15. It will open a Form view like below:
-![fig-7](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/formview.png)
+![fig-7](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/formview.png)
 16. Enter the details as below and click `Create`:
-![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/form1.png)
-![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/form2.png)
+![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form1.png)
+![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form2.png)
 17. Initially the argocd app will look like:
-![fig-10](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app1.png)
+![fig-10](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app1.png)
 18. After creating all the deployment,service and route the argocd app will look:
-![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app2.png)
-![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/app_view.png)
+![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app2.png)
+![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app_view.png)
 19. Check the deployment created by argocd:
 ```
 $ oc get deploy -n <NAMESPACE_NAME>
@@ -83,7 +83,7 @@ jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxxx
 
 ```
 22. Access the application using following URL <ROUTE_URL>/helloworld. The follwoing output will be shown in browser:
-![fig-13](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/application.png)
+![fig-13](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/application.png)
 
 
 

@@ -37,7 +37,7 @@ spec:
     - name: internal-registry
       value: default-route-openshift-image-registry.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
     - name: namespace
-      value: anil-cicd
+      value: testpipeline
     - name: buildah-image
       value: quay.io/buildah/stable:v1.17.0
     runAfter:
