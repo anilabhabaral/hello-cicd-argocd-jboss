@@ -46,7 +46,7 @@ argocd-anil-server-6c67d9659d-l4gkv        1/1     Running   0          12m
 10. Check the argocd route using `$ oc get route`
 11. Copy and past the route url of argocd in a browser, it will show the login page or argocd:
 ![fig-5](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argocd_login.png)
-12. Click on `LOG IN VIA OPENSHIFT`. It will redirect to the openshift login page. Add the required username and password to login to argocd using openshift login.
+12. Click on `LOG IN VIA OPENSHIFT`. It will redirect to the openshift login page. Use the required username and password to login to argocd using openshift login.
 13. ArgoCD home page:
 ![fig-6](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argo_home.png)
 14. Click on `+ NEW APP`
