@@ -25,6 +25,10 @@ To deploy the the image build by the above pipeline i used Openshift GitOps oper
 2. Go to Operators --> Operator Hub
 3. Search GitOps operator
 4. Install Openshift GitOps operator
-5. <<<.... In progress....!!!!!>>>
-   
+![fig-1](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/gitops_operator.png)
+5. Click on the `Red Hat OpenShift GitOps`. You will see the below:
+![fig-2](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/inside_operator.png)
+6. Click on `+ Create instance` in `ACD Argo CD` the above page
+7. You will get a Form view like below. In the Form view enter a Name and leave the other input box as default.
+![fig-3](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/create_instance.png)
 
