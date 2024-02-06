@@ -66,8 +66,7 @@ argocd-anil-server-6c67d9659d-l4gkv        1/1     Running   0          12m
 ```
 $ oc get deploy -n <NAMESPACE_NAME>
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-helloworld-deployment     1/1     1            1           47m  <============== 
-
+helloworld-deployment     1/1     1            1           47m 
 ```
 20. Check the service created by argocd:
 ```
