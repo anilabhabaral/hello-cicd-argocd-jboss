@@ -55,7 +55,7 @@ argocd-anil-server-6c67d9659d-l4gkv        1/1     Running   0          12m
 16. Enter the details as below and click `Create`:
 ![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form1.png)
 ![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form2.png)
-17. Initially the argocd app will look like:
+17. Initially the argocd app will look like:                                                   
 ![fig-10](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app1.png)
 18. After creating all the deployment,service and route the argocd app will look:
 ![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app2.png)
