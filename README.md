@@ -63,7 +63,7 @@ argocd-anil-server   argocd-anil-server-testpipeline.apps.xxxxx.xxxxx.xxxx.xxxxx
 ![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form1.png)
 ![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form2.png)
 17. After creating all the deployment,service and route the argocd app will look:
-![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app1.png)
+![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app.png)
 ![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app_view.png)
 18. Check the deployment created by argocd:
 ```
