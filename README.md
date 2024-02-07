@@ -88,7 +88,7 @@ NAME                             HOST/PORT                                      
 jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxx.xxxx.xxxx.xxxxx.xxxx.xxxx.xxxx.com          jboss-helloworld-service   8080                           None
 
 ```
-22. Access the application using following URL `<ROUTE_URL>/helloworld`. The follwoing output will be shown in browser:
+22. Access the application using following URL `<ROUTE_URL>/helloworld` in a browser:
 ![fig-13](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/application.png)
 
 
