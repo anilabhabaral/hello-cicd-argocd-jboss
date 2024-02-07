@@ -62,18 +62,16 @@ argocd-anil-server   argocd-anil-server-testpipeline.apps.xxxxx.xxxxx.xxxx.xxxxx
 16. Enter the details as below and click `Create`:
 ![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form1.png)
 ![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form2.png)
-17. Initially the argocd app will look like:                                                   
-![fig-10](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app1.png)
-18. After creating all the deployment,service and route the argocd app will look:
-![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app2.png)
+17. After creating all the deployment,service and route the argocd app will look:
+![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app1.png)
 ![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app_view.png)
-19. Check the deployment created by argocd:
+18. Check the deployment created by argocd:
 ```
 $ oc get deploy -n <NAMESPACE_NAME>
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
 helloworld-deployment     1/1     1            1           47m 
 ```
-20. Check the service created by argocd:
+19. Check the service created by argocd:
 ```
 $ oc get svc -n <NAMESPACE_NAME>
 NAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
@@ -81,14 +79,14 @@ jboss-helloworld-service     ClusterIP   xxx.xx.xx.xx      <none>        8080/TC
 
 ```
 
-21. Check the route created by argocd:
+20. Check the route created by argocd:
 ```
 $ oc get route  -n <NAMESPACE_NAME>
 NAME                             HOST/PORT                                                                            PATH   SERVICES                   PORT    TERMINATION            WILDCARD
 jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxx.xxxx.xxxx.xxxxx.xxxx.xxxx.xxxx.com          jboss-helloworld-service   8080                           None
 
 ```
-22. Access the application using following URL `<ROUTE_URL>/helloworld` in a browser:
+21. Access the application using following URL `<ROUTE_URL>/helloworld` in a browser:
 ![fig-13](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/application.png)
 
 
