@@ -85,7 +85,7 @@ jboss-helloworld-service     ClusterIP   xxx.xx.xx.xx      <none>        8080/TC
 ```
 $ oc get route  -n <NAMESPACE_NAME>
 NAME                             HOST/PORT                                                                            PATH   SERVICES                   PORT    TERMINATION            WILDCARD
-jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxxxx.xxxx.xxxxxx.com          jboss-helloworld-service   8080                           None
+jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxx.xxxx.xxxx.xxxxx.xxxx.xxxx.xxxx.com          jboss-helloworld-service   8080                           None
 
 ```
 22. Access the application using following URL `<ROUTE_URL>/helloworld`. The follwoing output will be shown in browser:
