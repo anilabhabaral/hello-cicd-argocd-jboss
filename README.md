@@ -51,21 +51,41 @@ $ oc get route
 NAME                 HOST/PORT                                                                       PATH   SERVICES             PORT    TERMINATION            WILDCARD
 argocd-anil-server   argocd-anil-server-testpipeline.apps.xxxxx.xxxxx.xxxx.xxxxxx.xxxxx.xxxx.xxxxx.com          argocd-anil-server   https   passthrough/Redirect   None
 ```
-11. Copy and past the route url of argocd in a browser, it will show the login page of argocd:
+11. In the `.infra/deployment/route.yaml` Add your specific openshift host url in the `host`:
+```
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app.kubernetes.io/instance: test
+  name: jboss-helloworld-service-route
+spec:
+  host: xxxx.xxxxx.xxxxxx.xxxxxxx.xxxxxxx <================= Add your specific openshift host url
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: jboss-helloworld-service
+    weight: 100
+  wildcardPolicy: None
+```
+12. Copy and past the route url of argocd in a browser, it will show the login page of argocd:
 ![fig-5](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argocd_login.png)
-12. Click on `LOG IN VIA OPENSHIFT`. It will redirect to the openshift login page. Use the required username and password to login to argocd using openshift login.
-13. ArgoCD home page:
+13. Click on `LOG IN VIA OPENSHIFT`. It will redirect to the openshift login page. Use the required username and password to login to argocd using openshift login.
+14. ArgoCD home page:
 ![fig-6](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/argo_home.png)
-14. Click on `+ NEW APP`
-15. It will open a Form view like below:
+15. Click on `+ NEW APP`
+16. It will open a Form view like below:
 ![fig-7](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/formview.png)
-16. Enter the details as below and click `Create`:
+17. Enter the details as below and click `Create`:
 ![fig-8](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form1.png)
 ![fig-9](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/form2.png)
-17. After creating all the deployment,service and route the argocd app will look:
+18. After creating all the deployment,service and route the argocd app will look:
 ![fig-11](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app.png)
 ![fig-12](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/app_view.png)
-18. Check the deployment created by argocd:
+19. Check the deployment created by argocd:
 ```
 $ oc get deploy -n <NAMESPACE_NAME>
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
