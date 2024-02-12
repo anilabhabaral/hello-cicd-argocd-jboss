@@ -15,7 +15,7 @@ To create and run the openshift pipeline follow the below mentioned steps:
 5. Run the following command to see the pipeline service account `$ oc get serviceaccount pipeline`
 6. Create the tasks `$ oc apply -f .infra/tasks/.`
 7. List the tasks `$ tkn task ls`
-8. Create pipeline `$ oc apply -f .infra/pipeline/.`
+8. Create pipeline `$ oc apply -f .infra/pipeline/pipeline.yaml`
 9. List the available pipeline `$ oc get pipeline`
 10. Run Pipeline `$ tkn pipeline start new-pipeline -w name=workspace-test,volumeClaimTemplateFile=https://raw.githubusercontent.com/anilabhabaral/hello-cicd-argocd-jboss/main/.infra/pipeline/pvc-anil.yaml --use-param-defaults`
 11. Check pipelinerun result `$ tkn pipelinerun ls`
