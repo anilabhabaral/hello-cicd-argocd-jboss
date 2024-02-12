@@ -62,7 +62,7 @@ metadata:
     app.kubernetes.io/instance: test
   name: jboss-helloworld-service-route
 spec:
-  host: xxxx.xxxxx.xxxxxx.xxxxxxx.xxxxxxx <================= Add your specific openshift host url
+  host: xxxx.xxxxx.xxxxxx.xxxxxxx.xxxxxxx         <============= Add your specific openshift host url
   port:
     targetPort: 8080
   to:
