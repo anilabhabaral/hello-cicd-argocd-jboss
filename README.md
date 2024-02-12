@@ -91,7 +91,7 @@ $ oc get deploy -n <NAMESPACE_NAME>
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
 helloworld-deployment     1/1     1            1           47m 
 ```
-19. Check the service created by argocd:
+20. Check the service created by argocd:
 ```
 $ oc get svc -n <NAMESPACE_NAME>
 NAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
@@ -99,14 +99,14 @@ jboss-helloworld-service     ClusterIP   xxx.xx.xx.xx      <none>        8080/TC
 
 ```
 
-20. Check the route created by argocd:
+21. Check the route created by argocd:
 ```
 $ oc get route  -n <NAMESPACE_NAME>
 NAME                             HOST/PORT                                                                            PATH   SERVICES                   PORT    TERMINATION            WILDCARD
 jboss-helloworld-service-route   jboss-helloworld-service-eap-test-02.apps.xxxx.xxxx.xxxx.xxxxx.xxxx.xxxx.xxxx.com          jboss-helloworld-service   8080                           None
 
 ```
-21. Access the application using following URL `<ROUTE_URL>/helloworld` in a browser:
+22. Access the application using following URL `<ROUTE_URL>/helloworld` in a browser:
 ![fig-13](https://github.com/anilabhabaral/hello-cicd-argocd-jboss/blob/main/screenshots/application.png)
 
 
