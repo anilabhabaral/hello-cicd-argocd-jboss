@@ -9,6 +9,6 @@ spec:
       command: ["/bin/bash", "-c"]
       args:
         - |
-          echo >>>>>>>> Deleting old helloworld application pod <<<<<<<<<<<
+          echo ">>>>>>>> Deleting old helloworld application pod <<<<<<<<<<<"
           oc scale deployment helloworld-deployment --replicas=0
           echo -----------------------------------
