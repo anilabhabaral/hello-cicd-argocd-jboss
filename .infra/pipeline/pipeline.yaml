@@ -48,5 +48,11 @@ spec:
     workspaces:
     - name: source
       workspace: workspace-test
+  - name: scale-0
+    runAfter:
+    - build-and-push-to-openshift-registry
+    taskRef:
+      kind: Task
+      name: scale-0
   workspaces:
   - name: workspace-test
