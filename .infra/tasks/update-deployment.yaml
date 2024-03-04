@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: replica-scale-0-task
+spec:
+  steps:
+    - name: apply
+      image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+      command: ["/bin/bash", "-c"]
+      args:
+        - |-dep
+          echo >>>>>>>> Deleting old helloworld application pod <<<<<<<<<<<
+          oc scale deployment helloworld-deployment --replicas=0
+          echo -----------------------------------
