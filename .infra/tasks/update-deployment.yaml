@@ -4,7 +4,7 @@ metadata:
   name: replica-scale-0-task
 spec:
   steps:
-    - name: apply
+    - name: scale-to-0
       image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
       command: ["/bin/bash", "-c"]
       args:
