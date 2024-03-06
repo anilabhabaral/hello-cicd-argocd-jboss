@@ -63,6 +63,7 @@ metadata:
   name: jboss-helloworld-service-route
 spec:
   host: xxxx.xxxxx.xxxxxx.xxxxxxx.xxxxxxx         <============= Add your specific openshift host url
+  path: "/helloworld"
   port:
     targetPort: 8080
   to:
