@@ -8,6 +8,7 @@ metadata:
   name: jboss-helloworld-service-route
 spec:
   host: jboss-helloworld-service-eap-test-02.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
+  path: "/helloworld"
   port:
     targetPort: 8080
   to:
